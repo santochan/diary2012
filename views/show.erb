@@ -1,0 +1,74 @@
+
+
+<h2 class="h_center"><%= @uname %><small>的2012</small></h2>
+<div id="myCarousel" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="/img/slide-02.jpg" alt="" data-pinit="registered">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>开始</h1>
+              <p class="lead"><span class ="blod"><%= @first_time %></span>，你写下了第一篇日报，从那时起，你开始记录每天的工作
+              </p>
+              <p class="lead">
+                这一年，参与了哪些项目？去过哪些地方出差？有过多少艳遇？
+              </p>
+              <p class="lead">
+                是否还记得当时的心情？
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="/img/slide-02.jpg" alt="" data-pinit="registered">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>第一篇</h1>
+              <p class="lead">还记得你写下的第一篇日报吗？
+              </p>
+              <p>
+                <span class ="blod">"<%= @first_note %>"</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="/img/slide-02.jpg" alt="" data-pinit="registered">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>数字</h1>
+              <span class ="blod"></span>
+              <p class="lead">2012年，你写了<span class ="blod"><%= @result["notes_count"]%></span>篇日报，总计<span class ="blod">
+                <%= @result["char_count"] %></span>字</p>
+              <p class="lead">这相当于<span class ="blod"><%= my_words_like(@result["char_count"]) %></span></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="/img/slide-02.jpg" alt="" data-pinit="registered">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>关键词</h1>
+              <p class="lead">你用到最多的词是「<span class ="blod"><%= @top_word[0] %></span>」,共使用了<span class ="blod">
+                <%= @top_word[1]%>
+              </span>次</p>
+              <p>还有这些词：『<span class ="blod"><%= @words %></span>』也用了很多</p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="/img/slide-02.jpg" alt="" data-pinit="registered">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>总结</h1>
+              <span class ="blod"></span>
+              <p class="lead">这一年，你坚持对自己每天的工作进行记录与总结</p>
+              <p class="lead">是名副其实的<span class ="blod">上进青年</span></p>
+              <p>虽然这个「日报系统」有诸多小问题，但你可以不在意这些细节并且坚忍使用(作者在此拜过了~)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+    </div>

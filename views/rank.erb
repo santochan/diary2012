@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="span8 offset2">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>姓名</th>
+          <th>点击数</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% counter =0 %>
+        <% @top_ten.each do |value| %>
+          <% counter +=1 %>
+          <tr>
+            
+            <td> <a href="user/<%= value[2] %>"><%= value[0] %></a> </td>
+            <td><%= set_color  counter,value[1] %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+
